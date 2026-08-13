@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* =========================================================
+   NAVIDA ENGINEERING SYSTEM
+   Global Design System
+   ========================================================= */
+
+:root {
+  /* ---------- Core Colors ---------- */
+
+  --color-bg: #05070a;
+  --color-bg-elevated: #090c11;
+  --color-bg-panel: #0b0f15;
+  --color-bg-panel-hover: #10151d;
+
+  --color-text-primary: #f4f1ea;
+  --color-text-secondary: #aaa9a4;
+  --color-text-muted: #686b70;
+
+  /* ---------- Brand ---------- */
+
+  --color-gold: #d9a84e;
+  --color-gold-bright: #f1c66d;
+  --color-gold-soft: rgba(217, 168, 78, 0.15);
+
+  --color-cyan: #4cc9e8;
+  --color-cyan-soft: rgba(76, 201, 232, 0.12);
+
+  --color-success: #57d68d;
+
+  /* ---------- Borders ---------- */
+
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-visible: rgba(255, 255, 255, 0.12);
+  --border-gold: rgba(217, 168, 78, 0.42);
+
+  /* ---------- Typography ---------- */
+
+  --font-display: "Manrope", sans-serif;
+  --font-mono: "DM Mono", monospace;
+
+  /* ---------- Layout ---------- */
+
+  --sidebar-width: 250px;
+  --content-max-width: 1500px;
+
+  /* ---------- Motion ---------- */
+
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 180ms var(--ease-standard);
+  --transition-normal: 320ms var(--ease-standard);
+  --transition-slow: 600ms var(--ease-standard);
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-bg);
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+
+  background:
+    radial-gradient(
+      circle at 70% 10%,
+      rgba(217, 168, 78, 0.045),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(76, 201, 232, 0.025),
+      transparent 30rem
+    ),
+    var(--color-bg);
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-display);
+  font-size: 15px;
+  line-height: 1.6;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+}
+
+button,
+a,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: var(--color-gold);
+  color: #05070a;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(217, 168, 78, 0.25);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(217, 168, 78, 0.5);
+}
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.display-title {
+  font-size: clamp(3rem, 11vw, 8rem);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 0.92;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.eyebrow {
+  color: var(--color-gold-bright);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   BACKGROUND SYSTEM
+   ========================================================= */
+
+.page-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 72px 72px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    rgba(0, 0, 0, 0.65) 55%,
+    transparent 100%
+  );
+}
+
+.page-noise {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  pointer-events: none;
+
+  opacity: 0.025;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.5'/%3E%3C/svg%3E");
+}
+
+/* =========================================================
+   PANEL SYSTEM
+   ========================================================= */
+
+.panel {
+  position: relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.012)
+    ),
+    rgba(9, 12, 17, 0.82);
+
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    border-color var(--transition-normal),
+    background var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+.panel:hover {
+  border-color: rgba(217, 168, 78, 0.22);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.015)
+    ),
+    rgba(11, 15, 21, 0.9);
+}
+
+/* =========================================================
+   GOLD ACCENTS
+   ========================================================= */
+
+.gold-text {
+  color: var(--color-gold-bright);
+}
+
+.gold-line {
+  width: 34px;
+  height: 1px;
+
+  background: var(--color-gold);
+
+  box-shadow:
+    0 0 12px rgba(217, 168, 78, 0.35);
+}
+
+.gold-glow {
+  box-shadow:
+    0 0 35px rgba(217, 168, 78, 0.08),
+    inset 0 0 25px rgba(217, 168, 78, 0.02);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+
+  min-height: 46px;
+  padding: 0.75rem 1.15rem;
+
+  border-radius: 10px;
+
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.button-primary {
+  color: #080909;
+
+  background: var(--color-gold-bright);
+  border: 1px solid var(--color-gold-bright);
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 35px rgba(217, 168, 78, 0.18);
+}
+
+.button-secondary {
+  color: var(--color-text-primary);
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border-visible);
+}
+
+.button-secondary:hover {
+  transform: translateY(-2px);
+
+  border-color: var(--border-gold);
+
+  background: var(--color-gold-soft);
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--color-success);
+
+  box-shadow:
+    0 0 10px rgba(87, 214, 141, 0.7);
+}
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+  outline: 2px solid var(--color-gold-bright);
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.site-container {
+  width: 100%;
+  max-width: 1500px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@media (min-width: 640px) {
+  .site-container {
+    padding-inline: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-container {
+    padding-inline: 48px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .site-container {
+    padding-inline: 64px;
+  }
+}
+
+/* =========================================================
+   SECTION SPACING
+   ========================================================= */
+
+.section {
+  position: relative;
+  padding-block: 96px;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding-block: 72px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+
+  .panel {
+    border-radius: 14px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
