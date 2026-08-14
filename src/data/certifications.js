@@ -1,3 +1,5 @@
+const PLACEHOLDER = `${import.meta.env.BASE_URL}certificates/certificate-placeholder.svg`;
+
 export const certifications = [
   {
     id: 'ibm-mainframe-developer',
@@ -6,7 +8,7 @@ export const certifications = [
     date: '2026',
     credentialUrl:
       'https://coursera.org/verify/professional-cert/M2XNPWJF83TO',
-    image: '/certificates/ibm-mainframe-developer.webp',
+    image: PLACEHOLDER,
     featured: true,
   },
 
@@ -17,7 +19,7 @@ export const certifications = [
     date: '2026',
     credentialUrl:
       'https://coursera.org/verify/8BKO0C5EA7SA',
-    image: '/certificates/enterprise-computing.webp',
+    image: PLACEHOLDER,
     featured: true,
   },
 
@@ -28,7 +30,7 @@ export const certifications = [
     date: '2026',
     credentialUrl:
       'https://coursera.org/verify/0HATTE8Z9IWN',
-    image: '/certificates/linux-terminal.webp',
+    image: PLACEHOLDER,
     featured: false,
   },
 
@@ -39,7 +41,7 @@ export const certifications = [
     date: '2026',
     credentialUrl:
       'https://coursera.org/verify/52I177ATWMRL',
-    image: '/certificates/lucidchart.webp',
+    image: PLACEHOLDER,
     featured: false,
   },
 
@@ -50,7 +52,7 @@ export const certifications = [
     date: '2026',
     credentialUrl:
       'https://coursera.org/verify/DVH1525EQE12',
-    image: '/certificates/advanced-sql.webp',
+    image: PLACEHOLDER,
     featured: true,
   },
 
@@ -61,7 +63,7 @@ export const certifications = [
     date: '2026',
     credentialUrl:
       'https://coursera.org/verify/K7TI3VSNEK42',
-    image: '/certificates/linux-devops.webp',
+    image: PLACEHOLDER,
     featured: false,
   },
 
@@ -71,7 +73,7 @@ export const certifications = [
     issuer: 'IBM',
     date: '2026',
     credentialUrl: 'https://coursera.org/verify/T7YYD0VZDXAZ',
-    image: '/certificates/ibm-ai.webp',
+    image: PLACEHOLDER,
     featured: true,
   },
 
@@ -81,7 +83,7 @@ export const certifications = [
     issuer: 'IBM',
     date: '2026',
     credentialUrl: 'https://coursera.org/verify/RZQAV6EC3EJG',
-    image: '/certificates/ibm-classification.webp',
+    image: PLACEHOLDER,
     featured: true,
   },
 
@@ -91,7 +93,7 @@ export const certifications = [
     issuer: 'IBM',
     date: '2026',
     credentialUrl: 'https://coursera.org/verify/3WJH9L5YXRPU',
-    image: '/certificates/ibm-regression.webp',
+    image: PLACEHOLDER,
     featured: true,
   },
 
@@ -101,7 +103,7 @@ export const certifications = [
     issuer: 'Semrush',
     date: '2026',
     credentialUrl: null,
-    image: '/certificates/semrush-ai-marketer.webp',
+    image: PLACEHOLDER,
     featured: false,
   },
 ]
