@@ -6,7 +6,10 @@ export const profile = {
   role: 'AI/ML Engineer & Software Developer',
 
   headline:
-    'Building intelligent systems that connect AI, software engineering, and real-world problems.',
+    'AI/ML Engineer building intelligent systems across machine learning, generative AI, research, and applied software engineering.',
+
+  introduction:
+    'AI/ML Engineer building intelligent systems across machine learning, generative AI, research, and applied software engineering.',
 
   location: 'Tirupati, Andhra Pradesh, India',
 

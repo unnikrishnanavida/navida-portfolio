@@ -5,7 +5,7 @@ export const achievements = [
     title: 'National Hackathon',
     category: 'Leadership',
     description:
-      'Contributed to organizing and conducting a national-level hackathon focused on technical innovation and problem solving.',
+      'Coordinated technical activities and execution for a national-level hackathon, supporting participants in developing and presenting innovative technical solutions.',
   },
 
   {
@@ -14,7 +14,7 @@ export const achievements = [
     title: 'Departmental Hackathons',
     category: 'Leadership',
     description:
-      'Organized and conducted departmental hackathon activities, helping create opportunities for students to build and present technical solutions.',
+      'Organized and managed departmental-level hackathon events, creating structured opportunities for students to design, build, and showcase technical implementations.',
   },
 
   {
@@ -23,15 +23,15 @@ export const achievements = [
     title: 'Coding Club Coordinator',
     category: 'Leadership',
     description:
-      'Coordinated coding-focused activities and supported technical engagement among students.',
+      'Led technical engagement initiatives as Coding Club Coordinator, fostering problem-solving culture and supporting student development through structured programming activities.',
   },
 
   {
     id: 'acm-challenge',
     year: '2026',
     title: 'ACM 30-Day Coding Challenge',
-    category: 'Competitive Programming',
+    category: 'Technical Excellence',
     description:
-      'Participated in a structured 30-day coding challenge focused on consistency and problem-solving practice.',
+      'Completed a structured 30-day competitive programming challenge, building consistency and depth in algorithmic problem-solving across diverse problem domains.',
   },
 ]

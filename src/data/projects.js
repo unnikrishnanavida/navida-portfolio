@@ -7,7 +7,21 @@ export const projects = [
     category: 'AI Research • Generative AI • Knowledge Systems',
 
     description:
-      'An AI-powered research environment designed to help transform complex information into structured knowledge, insights, and actionable research workflows.',
+      'An AI-powered research environment designed to transform complex information into structured knowledge, insights, and actionable research workflows.',
+
+    problem:
+      'Complex research requires collecting, understanding, and organizing information across multiple sources. Manual synthesis is time-intensive.',
+
+    system:
+      'Research → Retrieval → Analysis → Knowledge Structuring → Insights',
+
+    capabilities: [
+      'Research automation across domains',
+      'Information synthesis and aggregation',
+      'Knowledge organization and graph construction',
+      'AI-assisted analysis and insight generation',
+      'Web intelligence and data collection',
+    ],
 
     technologies: [
       'AI',
@@ -15,6 +29,7 @@ export const projects = [
       'Knowledge Graphs',
       'Research Automation',
       'Web Intelligence',
+      'Information Retrieval',
     ],
 
     highlights: [
@@ -24,7 +39,7 @@ export const projects = [
       'Modular research architecture',
     ],
 
-    github: null,
+    github: 'https://github.com/unnikrishnanavida/AURA',
     liveDemo: null,
 
     featured: true,
@@ -39,7 +54,31 @@ export const projects = [
     category: 'AI/ML • Edge AI • FinTech Security',
 
     description:
-      'An intelligent risk-analysis system focused on identifying potentially suspicious UPI transactions using machine-learning techniques and edge-oriented processing.',
+      'An intelligent risk-analysis system for detecting potentially suspicious UPI transactions using machine-learning techniques and edge-oriented inference.',
+
+    problem:
+      'Digital payment platforms require real-time identification of potentially fraudulent or suspicious transactions to protect user accounts and financial risk.',
+
+    pipeline: [
+      'Transaction Data',
+      'Preprocessing & Normalization',
+      'Feature Engineering',
+      'ML Classification (XGBoost)',
+      'Risk Scoring',
+      'Decision Signal',
+    ],
+
+    technical: [
+      'Python',
+      'Machine Learning',
+      'XGBoost (gradient-boosted classification)',
+      'Data Analysis & Preprocessing',
+      'Edge AI Architecture',
+      'Risk Classification Models',
+    ],
+
+    whyItMatters:
+      'Designed with edge-oriented inference in mind to reduce dependency on centralized processing for transaction-risk analysis, enabling faster decision-making and improved user privacy.',
 
     technologies: [
       'Python',
@@ -47,6 +86,7 @@ export const projects = [
       'XGBoost',
       'Edge AI',
       'Data Analysis',
+      'Feature Engineering',
     ],
 
     highlights: [
@@ -56,7 +96,7 @@ export const projects = [
       'Security-focused architecture',
     ],
 
-    github: null,
+    github: 'https://github.com/unnikrishnanavida/edge-upi-risk-intelligence',
     liveDemo: null,
 
     featured: true,
@@ -71,15 +111,28 @@ export const projects = [
     category: 'AI/ML • Audio Intelligence • Music',
 
     description:
-      'An AI-driven music analysis system exploring audio classification, pitch detection, and intelligent interpretation of musical characteristics.',
+      'An AI-driven music analysis system for audio classification, pitch detection, and intelligent interpretation of musical characteristics.',
+
+    pipeline: [
+      'Audio Input',
+      'Preprocessing & Normalization',
+      'Feature Extraction (Mel-scale, MFCCs, Spectral)',
+      'Pitch & Frequency Analysis',
+      'Classification',
+      'Musical Interpretation',
+    ],
 
     technologies: [
       'Python',
-      'Librosa',
+      'Librosa (audio analysis)',
       'Machine Learning',
       'Audio Processing',
-      'FastAPI',
+      'Pitch Detection',
+      'FastAPI (backend)',
     ],
+
+    direction:
+      'Exploring intelligent interpretation of musical characteristics including classification, pitch-based analysis, and automated feature extraction from audio signals.',
 
     highlights: [
       'Audio feature extraction',
